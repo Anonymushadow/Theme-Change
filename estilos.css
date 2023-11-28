@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --fondo: #f1f1f1;
+  --links: #222222;
+  --fondoNav: #FEFEFE;
+  --links__hover: #707070;
+  --switch: #343D5B;
+  --span__color: #fff;
+  --sombra: rgba(0, 0, 0, 0.16);
+}  
+
+body {
+  background-color: var(--fondo);
+  font-family: 'Roboto', sans-serif;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+a {
+  color: var(--links);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+nav {
+  background-color: var(--fondoNav);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px;
+  border-radius: 5px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 10px 10px 20px var(--sombra);
+          box-shadow: 10px 10px 20px var(--sombra);
+}
+
+.logotipo {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+.enlaces {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  margin-right: 40px;
+}
+
+a:hover {
+  color:var(--links__hover);
+}
+
+.switch {
+  background: var(--switch);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, .2);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, .2);
+}
+
+.active {
+  background: orange;
+  color: #000;
+}
+
+.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: var(--span__color);
+}
